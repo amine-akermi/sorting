@@ -1,0 +1,23 @@
+PROCEDURE switch(x,y : INTEGER)
+VAR
+    tmp : INTEGER
+
+BEGIN
+    tmp :=x
+    x:=y
+    y:= tmp
+END
+PROCEDURE selection(tab : ARRAY_OF typeinteger[n];)
+VAR
+    i,j,val,n:INTEGER
+BEGIN
+    FOR i FROM 0 TO n-2 STEP 1  DO
+        val:=i 
+        FOR j FROM 0 TO n-i-2 STEP 1 DO
+            IF (tab[j>tab[val]]) THEN
+        val:=j 
+            END_IF
+        END_FOR
+        switch(arr[val],arr[i])
+    END_FOR
+END
